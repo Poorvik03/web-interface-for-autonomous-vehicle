@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>REPORT</title>
+    <link rel="stylesheet" href="report.css">
+</head>
+<body>
+    <p class="rep">Your Response has been Reported</p>
+    <p id="reportMessage"></p>
+    <p>Click the button below to go back</p>
+    <button onclick="goBack()"><a href="file:///C:/Users/CSP/Desktop/wep2/dashboard.html">Back</button>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        // Display bus ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const busId = urlParams.get('busId');
+        document.getElementById("reportMessage").innerHTML = `Our Technician will head to the location of Bus ${busId}.`;
+    </script>
+</body>
+</html>

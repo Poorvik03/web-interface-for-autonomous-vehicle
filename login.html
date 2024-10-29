@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to the Login Page</h1>
+    <div class="form-container" id="loginForm">
+      <h2>Login</h2>
+      <label for="loginUsername">Username</label>
+      <input type="text" id="loginUsername" placeholder="Enter your username" required>
+      <label for="loginPassword">Password</label>
+      <input type="password" id="loginPassword" placeholder="Enter your password" required>
+      <label for="loginRole">Role</label>
+      <select id="loginRole">
+        <option value="User">User</option>
+        <option value="Admin">Admin</option>
+        <option value="Moderator">Moderator</option>
+      </select>
+      <button onclick="login()">Login</button>
+      <p id="loginMessage"></p>
+      <p>Don't have an account? <a href="#" onclick="toggleForm('registerForm')">Register here</a></p>
+    </div>
+
+    <div class="form-container hidden" id="registerForm">
+      <h2>Register</h2>
+      <label for="registerUsername">Username</label>
+      <input type="text" id="registerUsername" placeholder="Choose a username" required>
+      <label for="registerPassword">Password</label>
+      <input type="password" id="registerPassword" placeholder="Choose a password" required>
+      <label for="registerRole">Role</label>
+      <select id="registerRole">
+        <option value="User">User</option>
+        <option value="Admin">Admin</option>
+        <option value="Moderator">Moderator</option>
+      </select>
+      <button onclick="register()">Register</button>
+      <p id="registerMessage"></p>
+      <p>Already have an account? <a href="#" onclick="toggleForm('loginForm')">Login here</a></p>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
